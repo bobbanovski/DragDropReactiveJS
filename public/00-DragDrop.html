@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Drag/Drop</title>
+        <style>
+            .dragable {
+                transition: background 250ms;
+                background: #aaa;
+                width: 30px;
+                height: 30px;
+                position: absolute;
+                cursor: move;
+                border: 5px solid #444;
+                top: 0;
+                left: 0;
+            }
+            .dragable.dragging {
+                background: #555;
+                pointer-events: none;
+            }
+
+            .droparea {
+                transition: background 250ms;
+                padding: 10px;
+                background: #007ACC;
+                margin: 10px 0;
+                color: #fff;
+            }
+
+            .dropped {
+                background: #FEE200;
+                color: #000;
+            }
+        </style>
+	</head>
+	<body>
+		<h1>Drag/Drop</h1>
+        
+		<div class="dragable" id="drag"></div>
+        <ul>
+            <li class="droparea">Drop Area 1</li>
+            <li class="droparea">Drop Area 2</li>
+            <li class="droparea">Drop Area 3</li>
+            <li class="droparea">Drop Area 4</li>
+            <li class="droparea">Drop Area 5</li>
+            <li class="droparea">Drop Area 6</li>
+        </ul>
+		<script src="/build/00-DragDrop.js"></script>
+	</body>
+</html>
